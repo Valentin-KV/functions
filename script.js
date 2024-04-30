@@ -54,3 +54,17 @@ const res = convert(500, usdCurr);
 promotion(res);
 
 
+// Ещё раз о важности return
+function test() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        if (i === 3) return      // возвращает undefined  
+    }
+    console.log('Done');
+}
+
+test();
+
+function doNothing() {};
+console.log(doNothing() === undefined);  // вернёт true, т.к. пустая функция возвращает undefined
+// любая функция которая не содержит return возвращает undefined
