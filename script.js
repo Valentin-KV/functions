@@ -35,3 +35,15 @@ const logger = function() {
 logger();
 
 const calc = (a, b) => a + b;
+
+
+// Универсальная функция для расчета курса валют
+const usdCurr = 3.25;
+const eurCurr = 3.5;
+
+function convert(amount, curr) {
+    console.log(curr * amount);
+}
+convert(500, usdCurr);
+convert(500, eurCurr);
+
