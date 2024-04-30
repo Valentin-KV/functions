@@ -40,10 +40,17 @@ const calc = (a, b) => a + b;
 // Универсальная функция для расчета курса валют
 const usdCurr = 3.25;
 const eurCurr = 3.5;
+const discount = 0.9;
 
 function convert(amount, curr) {
-    console.log(curr * amount);
+    return curr * amount;
 }
-convert(500, usdCurr);
-convert(500, eurCurr);
+
+function promotion(result) {
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCurr);
+promotion(res);
+
 
