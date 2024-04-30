@@ -68,3 +68,54 @@ test();
 function doNothing() {};
 console.log(doNothing() === undefined);  // вернёт true, т.к. пустая функция возвращает undefined
 // любая функция которая не содержит return возвращает undefined
+
+
+// Задания на работу с функциями
+// #1
+function sayHello(text) {
+    let res = "Привет, " + text + "!";
+    console.log(res);
+    return res;
+}
+sayHello('Антон');
+
+// #2
+function returnNeighboringNumbers(num) {
+    let arr = [];
+    arr[0] = num - 1;
+    arr.push(num);
+    arr.push(num + 1);
+    console.log(arr);
+    return arr;
+}
+returnNeighboringNumbers(5);
+
+// #3
+function getMathResult() {
+
+}
+// решение 3
+function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0) {
+        console.log(num);
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${num * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+    console.log(str);
+    return str;
+}
+
+getMathResult(10, 5);
+getMathResult(10, -5);
