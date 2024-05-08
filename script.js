@@ -191,3 +191,60 @@ function getCoupeNumber(seatNumber) {
 }
 
 getCoupeNumber(33);
+
+
+// Упражнение по написанию кода 8: (*) Продвинутые задания на использование функций
+// Задача №1
+
+function getTimeFromMinutes(minutes) {
+    if (minutes < 0 || typeof(minutes) !== 'number' || !Number.isInteger(minutes) ) {
+        return "Ошибка, проверьте данные";
+    }
+    
+    let hours = Math.trunc(minutes / 60);
+    let minut = minutes % 60;
+    let chas;
+
+    switch (hours) {
+        case 0:
+            chas = "часов";
+            break;
+        case 1:
+            chas = "час";
+            break;
+        case 2:
+            chas = "часа";
+            break;
+        case 3:
+            chas = "часа";
+            break;
+        case 4:
+            chas = "часа";
+            break;
+        case 5:
+            chas = "часов";
+            break;
+        case 6:
+            chas = "часов";
+            break;    
+        case 7:
+            chas = "часов";
+            break;
+        case 8:
+            chas = "часов";
+            break;
+        case 9:
+            chas = "часов";
+            break;
+        case 10:
+            chas = "часов";
+            break;
+        default:
+            console.log("Не верное значение!");
+            break;
+    }
+    let result = "Это " + hours + " " + chas + " и " + minut + " минут";
+    console.log(result);
+    return result;
+}
+getTimeFromMinutes(150);
