@@ -248,3 +248,18 @@ function getTimeFromMinutes(minutes) {
     return result;
 }
 getTimeFromMinutes(150);
+
+// Задача 2 (не получилось решить самому)
+
+function findMaxNumber(a, b ,c, d) {
+    // Самое простое - это использовать Math.max :)
+    if (typeof(a) !== 'number' ||
+        typeof(b) !== 'number' ||
+        typeof(c) !== 'number' ||
+        typeof(d) !== 'number') {
+        return 0;
+    } else {
+        return Math.max(a, b ,c, d);
+    }
+}
+findMaxNumber(1, 5, 6.6, 15);
